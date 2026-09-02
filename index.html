@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sammy's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle">🌙</button>
+    </nav>    
+
+    <section id="home" class="hero">
+        <img src="sammy.jpg" alt="Sammy"
+        class="profile-photo">
+    <h1>Hi, I'm Sammy👋</h1>
+
+    <h2>Computer Science Student & Aspiring Software Developer</h2>
+
+    <p>
+I build responsive websites and useful digital projects while
+developing my skills in Python, JavaScript, and software development.
+</p>
+
+    <a href="#projects" class="hero-button">View My Projects</a>
+</section>
+    <section id="about">
+    <h2>About Me</h2>
+
+    <div class="about-container">
+
+        <img src="sammy.jpg" alt="Sammy" class="about-photo">
+
+        <div class="about-text">
+            <p>
+    Hello! My name is Sammy, a Computer Science student
+    passionate about programming, web development, and technology.
+    I enjoy creating websites, applications, and useful digital projects.
+</p>
+
+            <p>
+                My goal is to become a strong software developer
+                and continue improving my technology skills.
+            </p>
+        </div>
+
+    </div>    
+</section>
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill">
+            <h3>HTML</h3>
+            <p>Building the structure and content of websites.</p>
+        </div>
+
+        <div class="skill">
+            <h3>CSS</h3>
+            <p>Designing responsive and visually appealing websites.</p>
+        </div>
+
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <p>Adding interactive features and dynamic behavior to websites.</p>
+        </div>
+
+        <div class="skill">
+            <h3>Python</h3>
+            <p>Developing programs, applications and problem-solving solutions.</p>
+        </div>
+
+    </div>
+</section>
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>🌐 My First Website</h3>
+            <p>
+    A responsive website built with HTML, CSS and JavaScript,
+    featuring interactive navigation and user-friendly design.
+</p>
+     
+            <a href="project1.html"
+            class="project-button">View Project</a>
+            
+        </div>
+        <div class="project-card">
+            <h3>🛍️ Smart Angel Website</h3>
+
+    <p>
+        A responsive business website built with HTML, CSS and JavaScript,
+        featuring product displays, navigation and interactive features.
+    </p>
+
+    <a href="https://adombasammy148.github.io/smart_angel_wedsite/"
+       class="project-button"
+       target="_blank">
+       View Website
+    </a>
+</div>
+
+        <div class="project-card">
+            <h3>🐍 Python Projects</h3>
+            <p>
+    A collection of Python projects demonstrating programming,
+    problem-solving, and application development skills.
+</p>
+            <a href="python-projects.html"
+            class="project-button">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>📚 School Finder</h3>
+            <p>
+    A web application designed to help users find senior high
+    schools and explore important school information using search
+    and filtering features.
+</p>
+            <a href="school-finder.html"
+            class="project-button">View Project</a>
+        </div>
+
+    </div>
+</section>
+<section id="services">
+
+    <h2>My Services</h2>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <h3>Website Development</h3>
+            <p>
+    I build responsive and user-friendly websites using
+    HTML, CSS and JavaScript for individuals and small businesses.
+</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Python Programming</h3>
+         <p>
+    I develop Python programs and small applications
+    to solve practical problems and automate tasks.
+</p>   
+        </div>
+
+        <div class="service-card">
+            <h3>Data Analysis</h3>
+            <p>
+    I analyze data using spreadsheets, statistics, and
+    basic data-analysis techniques to find useful insights.
+</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Cybersecurity</h3>
+            <p>
+    I am developing practical cybersecurity skills focused
+    on system security, application security, and protecting data.
+</p>
+        </div>
+
+    </div>
+
+</section>
+<section id="contact">
+    <h2>Let's Work Together...</h2>
+    <p>
+    Have a project in mind? I'd love to hear about it.
+    Send me a message and let's build something together.
+</p>
+
+    <form action="https://formspree.io/f/xzebrbza" method="POST">
+
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <br><br>
+
+    <label>Message:</label>
+    <br>
+    <textarea name="message" placeholder="Write your message" required></textarea>
+
+    <br><br>
+
+    <button type="submit">Send Message</button>
+
+</form>
+
+<p id="form-message"></p>
+</section>
+
+<footer>
+    <p>© 2026 Sammy's Website. All rights reserved.</p>
+    <p>Built with HTML, css & JavaScript💻</HTML></p>
+
+    <p>
+    <a href="https://github.com/AdombaSammy148" target="_blank">
+        GitHub
+    </a>
+</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
