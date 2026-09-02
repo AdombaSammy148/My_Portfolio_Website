@@ -632,6 +632,17 @@ body.dark-mode .hero{
         font-size: 16px;
         padding: 6px 8px;
     }
+    body {
+    font-size: 17px;
+    }
+
+    section {
+    padding: 35px 20px;
+    }
+
+    h2 {
+    font-size: 28px;
+    }
 }
 @media (max-width: 700px){
     .hero{
