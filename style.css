@@ -677,6 +677,55 @@ body.dark-mode .hero{
     width: 90%;
     max-width: 350px;
     }
+
+    
+    .project-card {
+    width: 95%;
+    max-width: 400px;
+    padding: 25px;
+    }
+
+    .project-card h3 {
+    font-size: 22px;
+    }
+
+    .project-card p {
+    font-size: 17px;
+    }
+
+    nav a {
+    font-size: 16px;
+    padding: 10px 12px;
+    }
+
+    .skill,
+    .service-card {
+    width: 95%;
+    max-width: 400px;
+    padding: 25px;
+    }
+
+    .skill h3,
+    .service-card h3 {
+    font-size: 21px;
+    }
+
+    .skill p,
+    .service-card p {
+    font-size: 17px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+    width: 95%;
+    font-size: 17px;
+    padding: 12px;
+    }
+
+    .contact-form button {
+    font-size: 17px;
+    padding: 12px 25px;
+    }
 }
 .project-status{
     display: inline-block;
