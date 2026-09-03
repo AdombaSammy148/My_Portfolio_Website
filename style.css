@@ -616,22 +616,18 @@ body.dark-mode .hero{
     background-color: rgba(255, 255, 255, 0.2);
     transform: rotate(15deg);
 }
+
+#menu-toggle {
+    display: none;
+}
+
+#side-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 @media (max-width: 700px) {
-    nav {
-        flex-wrap: wrap;
-        padding: 12px 10px;
-        gap: 5px;
-    }
-
-    nav a {
-        font-size: 15px;
-        padding: 8px 11px;
-    }
-
-    #theme-toggle {
-        font-size: 16px;
-        padding: 6px 8px;
-    }
+    
     body {
     font-size: 17px;
     }
@@ -643,7 +639,9 @@ body.dark-mode .hero{
     h2 {
     font-size: 28px;
     }
+
 }
+
 @media (max-width: 700px){
     .hero{
         padding: 50px 15px;
@@ -751,4 +749,62 @@ body.dark-mode .hero{
 .hero-button:hover {
     background-color: blue;
     transform: translateY(-5px);
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        justify-content: flex-start;
+        padding: 12px 15px;
+    }
+
+    #menu-toggle {
+    display: block;
+    position: static;
+    top: 20px;
+    left: 15px;
+    font-size: 15px;
+    background: goldenrod;
+    border: none;
+    color: black;
+    cursor: pointer;
+    z-index: 1002;
+    }
+
+    #side-menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 220px;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 20px 20px;
+        gap: 15px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    #side-menu.open {
+        left: 0;
+    }
+
+    #side-menu a {
+        color: #333;
+        font-size: 17px;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    #side-menu a:hover {
+        background-color: #f2f2f2;
+        transform: none;
+    }
+
+    #side-menu #theme-toggle {
+        margin-top: 10px;
+    }
 }

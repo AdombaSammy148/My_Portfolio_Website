@@ -5,16 +5,15 @@ themeToggle.addEventListener("click", () => {
 
     if (document.body.classList.contains("dark-mode")) {
         themeToggle.textContent = "☀️";
-        localStorage.setItem("theme","dark");
+        localStorage.setItem("theme", "dark");
     } else {
         themeToggle.textContent = "🌙";
-        localStorage.setItem("theme","light");
+        localStorage.setItem("theme", "light");
     }
 });
 
-if (localStorage.getItem("theme")==="dark") {
-    document.body.classList.add("dark-mode")
-    ;
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
     themeToggle.textContent = "☀️";
 }
 
@@ -28,7 +27,13 @@ function showMessage() {
     }
 }
 
-
 function viewProject() {
     alert("This is my first website project!");
 }
+
+const menuToggle = document.getElementById("menu-toggle");
+const sideMenu = document.getElementById("side-menu");
+
+menuToggle.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+});
