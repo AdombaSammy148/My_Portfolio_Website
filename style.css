@@ -825,9 +825,11 @@ body.dark-mode .hero{
     opacity: 1;
     visibility: visible;
     }
+
+    #theme-toggle {
+    background-color: #d4af37;
+    }
 }
 
-#theme-toggle {
-    background-color: #d4af37;
-}
+
     
