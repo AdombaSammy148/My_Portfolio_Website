@@ -50,6 +50,7 @@ menuToggle.addEventListener("click", () => {
 menuOverlay.addEventListener("click", () => {
     sideMenu.classList.remove("open");
     menuOverlay.classList.remove("open");
+     menuToggle.textContent = "☰";
 });
 
 const menuLinks = sideMenu.querySelectorAll("a");
