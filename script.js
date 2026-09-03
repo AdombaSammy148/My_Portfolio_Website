@@ -58,5 +58,6 @@ menuLinks.forEach(link => {
     link.addEventListener("click", () => {
         sideMenu.classList.remove("open");
         menuOverlay.classList.remove("open");
+        menuToggle.textContent = "☰";
     });
 });
