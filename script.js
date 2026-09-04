@@ -62,3 +62,14 @@ menuLinks.forEach(link => {
         menuToggle.textContent = "☰";
     });
 });
+
+const backToTop = document.querySelector(".back-to-top");
+window.addEventListener("scroll",() => {
+    if (window.scrollY > 1000 ) {
+    backToTop.style.opacity = "1";
+    backToTop.style.visibility = "visible";    
+    }  else{
+        backToTop.style.opacity = "0";
+        backToTop.style.visibility = "hidden";
+    }
+});    
