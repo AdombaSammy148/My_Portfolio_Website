@@ -94,10 +94,14 @@ footer {
     margin-top: 30px;
 }
 .hero {
-    background-color: darkblue;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(135deg, #050816, #0b1228, #071a3d);
+    padding: 60px 8%;
     color: white;
-    padding: 80px 20px;
-    margin-bottom: 30px;
 }
 
 .hero h1 {
@@ -315,11 +319,10 @@ section{
 
 .hero button:hover {
     transform: translateY(-2px);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .hero {
-    background: linear-gradient(135deg,#f5f7ff, #e8ecff);
     padding: 80px 25px;
     border-radius: 0 0 30px 30px;
 }
@@ -598,23 +601,25 @@ body.dark-mode #home h2,
 body.dark-mode #home p {
     color: white !important;
 }
-body.dark-mode .hero{
-    background: #121212!important;
-    color: white!important;
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #050816, #0b1228, #071a3d) !important;
+    color: white !important;
 }
 #theme-toggle:hover{
     background-color: goldenrod;
     color: burlywood;
     border: 2px solid white;
     padding: 7px 10px;
-    border-radius: 50%;
+    border-radius: 10px;
     font-size: 10px;
     cursor: pointer;
-    transition: 0s;
 }
 #theme-toggle:hover{
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(5px);
+}
+#theme-toggle{
+    background-color: brown;
 }
 
 #menu-toggle {
@@ -863,4 +868,69 @@ body.dark-mode .hero{
     font-size: 24px;
     opacity: 0;
     visibility: hidden;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(59, 108, 255, 0.4);
+}
+
+.hello {
+    color: wheat!important;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin: 0 0 10px;
+    color: white;
+}
+
+.hero-content h2 {
+    color: #3b6cff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.hello) {
+    color: #b8b8b8;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #3b6cff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    height: 45px;
+    width: 180px;
+}
+.contact-button:hover{
+    transition: 0.3s;
+    background-color: wheat;
+    transform: translateY(-2px);
 }
