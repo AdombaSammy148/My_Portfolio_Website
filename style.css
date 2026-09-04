@@ -934,3 +934,58 @@ body.dark-mode .hero {
     background-color: wheat;
     transform: translateY(-2px);
 }
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 90px 20px 50px;
+        gap: 35px;
+    }
+
+    .hero-image {
+    order: -1;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .hero-content > p:not(.hello) {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-button,
+    .contact-button {
+        width: 100%;
+        max-width: 280px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .profile-photo {
+        width: 260px;
+        height: 330px;
+    }
+}
