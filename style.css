@@ -931,7 +931,7 @@ body.dark-mode .hero {
 }
 .contact-button:hover{
     transition: 0.3s;
-    background-color: wheat;
+    background-color: blue;
     transform: translateY(-2px);
 }
 
@@ -987,5 +987,44 @@ body.dark-mode .hero {
     .profile-photo {
         width: 260px;
         height: 330px;
+    }
+}
+
+.project-hero {
+    background: linear-gradient(135deg, #050816, #0b1228, #071a3d);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+}
+
+.project-hero h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.project-hero p {
+    color: #b8b8b8;
+    font-size: 25px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: auto;
+}
+
+@media (max-width: 700px) {
+    .project-hero {
+        padding: 50px 20px;
+        min-height: auto;
+    }
+
+    .project-hero h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .project-hero p {
+        font-size: 23px;
+        line-height: 1.6;
     }
 }
