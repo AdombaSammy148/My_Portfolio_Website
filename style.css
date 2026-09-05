@@ -1028,3 +1028,90 @@ body.dark-mode .hero {
         line-height: 1.6;
     }
 }
+
+.python-project {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.code-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-info {
+    text-align: center;
+}
+
+.project-info h3 {
+    color: darkblue;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .python-project {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .code-image {
+        width: 100%;
+    }
+
+    .project-info {
+        order: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    nav,
+    .project-hero {
+        width: 100%;
+    }
+}
+
+@media (min-width: 701px) {
+    .python-project {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 25px;
+        width: 95%;
+        max-width: 1200px;
+        margin: 25px auto;
+        padding: 20px;
+    }
+}
+
+.code-image {
+    transition: 0.3s;
+}
+
+.code-image:hover {
+    transform: scale(1.03);
+}
+
+.python-project {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    margin-bottom: 30px;
+}
