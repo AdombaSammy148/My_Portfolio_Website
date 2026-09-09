@@ -19,7 +19,9 @@
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
 
-        <button id="theme-toggle">🌙</button>
+        <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">&#9790;</span>
+        </button>
     </div>
     
     <div id="menu-overlay"></div>
@@ -197,41 +199,40 @@
 
 </section>
 <section id="contact">
-    <h2>Let's Work Together...</h2>
-    <p>
-    Have a project in mind? I'd love to hear about it.
-    Send me a message and let's build something together.
-</p>
+    <div class="contact-heading">
+        <p class="section-eyebrow">Get in touch</p>
+        <h2>Let's Work Together</h2>
+        <p>Have a project in mind? Send me a message and let's build something useful together.</p>
+    </div>
 
-    <form action="https://formspree.io/f/xzebrbza" method="POST">
+    <form class="contact-form" action="https://formspree.io/f/xzebrbza" method="POST">
+        <div class="form-fields">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+            </div>
 
-    <label>Name:</label>
-    <input type="text" name="name" placeholder="Enter your name" required>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
 
-    <br><br>
+            <div class="form-field form-field-wide">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me a little about your project..." required></textarea>
+            </div>
+        </div>
 
-    <label>Email:</label>
-    <input type="email" name="email" placeholder="Enter your email" required>
+        <div class="contact-actions">
+            <button type="submit">Send Message <span aria-hidden="true">&#8599;</span></button>
+            <a href="https://wa.me/233257983148" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+                <span aria-hidden="true">&#128172;</span> Chat on WhatsApp
+            </a>
+        </div>
 
-    <br><br>
+    </form>
 
-    <label>Message:</label>
-    <br>
-    <textarea name="message" placeholder="Write your message" required></textarea>
-
-    <br><br>
-
-    <button type="submit">Send Message</button>
-
-    <a href="https://wa.me/233257983148"
-   class="whatsapp-button"
-   target="_blank">
-    💬 Chat with me on WhatsApp
-    </a>
-
-</form>
-
-<p id="form-message"></p>
+    <p id="form-message" aria-live="polite"></p>
 </section>
 
 <footer>

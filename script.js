@@ -1,21 +1,24 @@
 const themeToggle = document.getElementById("theme-toggle");
 
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+function updateThemeToggle(isDarkMode) {
+    const themeIcon = themeToggle.querySelector(".theme-icon");
 
-    if (document.body.classList.contains("dark-mode")) {
-        themeToggle.textContent = "☀️ Switch to Light Mode";
-        localStorage.setItem("theme", "dark");
-    } else {
-        themeToggle.textContent = "🌙 Switch to Dark Mode";
-        localStorage.setItem("theme", "light");
-    }
-});
-
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    themeToggle.textContent = "☀️ Switch to Light Mode";
+    document.body.classList.toggle("dark-mode", isDarkMode);
+    themeIcon.textContent = isDarkMode ? "☀" : "☾";
+    themeToggle.setAttribute("aria-label", isDarkMode ? "Switch to light mode" : "Switch to dark mode");
+    themeToggle.setAttribute("aria-pressed", String(isDarkMode));
 }
+
+const savedTheme = localStorage.getItem("theme");
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+updateThemeToggle(savedTheme ? savedTheme === "dark" : prefersDarkMode);
+
+themeToggle.addEventListener("click", () => {
+    const isDarkMode = !document.body.classList.contains("dark-mode");
+
+    updateThemeToggle(isDarkMode);
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+});
 
 function showMessage() {
     let visitor = prompt("What is your name?");

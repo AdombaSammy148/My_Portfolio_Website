@@ -358,57 +358,123 @@ section{
     line-height: 1.6;
 }
 
-#contact{
-    text-align: center;
-}
-#contact form{
-    max-width: 600px;
-    margin: 30px auto;
+#contact {
+    text-align: left;
+    background: linear-gradient(145deg, #ffffff, #f5f7ff);
 }
 
-#contact label{
+.contact-heading {
+    max-width: 640px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.section-eyebrow {
+    margin: 0 0 8px;
+    color: #3b6cff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-heading h2 {
+    margin: 0 0 12px;
+}
+
+.contact-heading > p:last-child {
+    margin: 0;
+    line-height: 1.6;
+}
+
+#contact .contact-form {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px;
+    background: white;
+    border: 1px solid #e1e6f5;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(18, 38, 85, 0.1);
+}
+
+.form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field-wide {
+    grid-column: 1 / -1;
+}
+
+#contact label {
     display: block;
     margin-bottom: 8px;
+    color: #18264d;
+    font-size: 14px;
     font-weight: bold;
 }
 
 #contact input,
-#contact textarea{
+#contact textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 14px 15px;
+    border: 1px solid #cfd6e8;
+    border-radius: 9px;
+    background: #fbfcff;
+    color: #18264d;
+    font: inherit;
     font-size: 16px;
-    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-#contact textarea{
+#contact textarea {
     min-height: 150px;
     resize: vertical;
 }
 
 #contact input:focus,
-#contact textarea:focus{
+#contact textarea:focus {
     outline: none;
-    border: 2px solid darkblue;
+    border-color: #3b6cff;
+    box-shadow: 0 0 0 3px rgba(59, 108, 255, 0.15);
+}
+
+.contact-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+#contact button,
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 #contact button {
     background-color: darkblue;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-#contact button:hover {
+.whatsapp-button {
+    background: #e7f8ee;
+    color: #147a3d;
+}
+
+#contact button:hover,
+.whatsapp-button:hover {
     transform: translateY(-2px);
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 footer {
@@ -485,111 +551,59 @@ footer a:hover {
     opacity: 0.7;
 }
 body.dark-mode {
-    background-color: #121212;
-    color: white;
+    background-color: #101522;
+    color: #f5f7ff;
 }
 
-body.dark-mode section {
-    color: white;
-}
-
+body.dark-mode section,
 body.dark-mode .skill,
 body.dark-mode .project-card,
 body.dark-mode .service-card {
-    background-color: #1e1e1e;
-    color: white;
+    background-color: #182033;
+    color: #f5f7ff;
 }
 
-body.dark-mode h2,
-body.dark-mode .skill h3,
-body.dark-mode .project-card h3,
-body.dark-mode .service-card h3 {
-    color: white;
+body.dark-mode nav {
+    background-color: #111827;
 }
 
-body.dark-mode #contact input,
-body.dark-mode #contact textarea {
-    background-color: #1e1e1e;
-    color: white;
-    border-color: #555;
-}
-body.dark-mode p {
-    color: #eeeeee;
-}
-
-body.dark-mode h1 {
-    color: white;
-}
-
-body.dark-mode h2 {
-    color: white;
-}
-
-body.dark-mode h3 {
-    color: white;
-}
-
-body.dark-mode .hero h2 {
-    color: #dddddd;
-}
-
-body.dark-mode nav a {
-    color: white;
-}
-
-body.dark-mode .skill p,
-body.dark-mode .project-card p,
-body.dark-mode .service-card p {
-    color: #eeeeee;
-}
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode section {
-    background-color: #121212;
-    color: white;
-}
-
+body.dark-mode nav a,
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode p {
-    color: white;
-}
-
-body.dark-mode nav {
-    background-color: #3b2418;
-}
-
-body.dark-mode nav a {
-    color: white;
-}
-
-body.dark-mode .skill,
-body.dark-mode .project-card,
-body.dark-mode .service-card {
-    background-color: #1e1e1e;
-    color: white;
+    color: #f5f7ff;
 }
 
 body.dark-mode .skill p,
 body.dark-mode .project-card p,
 body.dark-mode .service-card p {
-    color: #dddddd;
+    color: #d7deee;
+}
+
+body.dark-mode #contact {
+    background: linear-gradient(145deg, #182033, #111827);
+}
+
+body.dark-mode #contact .contact-form {
+    background: #202b42;
+    border-color: #35415c;
+}
+
+body.dark-mode #contact label {
+    color: #f5f7ff;
 }
 
 body.dark-mode #contact input,
 body.dark-mode #contact textarea {
-    background-color: #1e1e1e;
-    color: white;
-    border-color: #555;
+    background-color: #111827;
+    color: #f5f7ff;
+    border-color: #4a5875;
 }
 
 body.dark-mode footer {
-    background-color: #0d0d0d;
-    color: white;
+    background-color: #0b1020;
+    color: #f5f7ff;
 }
 body.dark-mode #home {
     background-color: #121212 !important;
@@ -605,21 +619,29 @@ body.dark-mode .hero {
     background: linear-gradient(135deg, #050816, #0b1228, #071a3d) !important;
     color: white !important;
 }
-#theme-toggle:hover{
-    background-color: goldenrod;
-    color: burlywood;
-    border: 2px solid white;
-    padding: 7px 10px;
-    border-radius: 10px;
-    font-size: 10px;
-    cursor: pointer;
-}
-#theme-toggle:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(5px);
-}
 #theme-toggle{
-    background-color: brown;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    line-height: 1;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: rotate(12deg) scale(1.05);
+}
+
+.theme-icon {
+    display: block;
 }
 
 #menu-toggle {
@@ -729,6 +751,29 @@ body.dark-mode .hero {
     font-size: 17px;
     padding: 12px 25px;
     }
+
+    #contact .contact-form {
+    padding: 20px;
+    }
+
+    .form-fields {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    }
+
+    .form-field-wide {
+    grid-column: auto;
+    }
+
+    .contact-actions {
+    align-items: stretch;
+    flex-direction: column;
+    }
+
+    #contact button,
+    .whatsapp-button {
+    width: 100%;
+    }
 }
 .project-status{
     display: inline-block;
@@ -831,9 +876,6 @@ body.dark-mode .hero {
     visibility: visible;
     }
 
-    #theme-toggle {
-    background-color: #d4af37;
-    }
 }
 .whatsapp-button {
     display: inline-block;
