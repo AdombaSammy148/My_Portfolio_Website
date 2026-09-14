@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sammy's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
-    <button id="menu-toggle">☰</button>
+    <nav class="main-nav">
+    <button id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
 
     <div id="side-menu">
         <a href="#home">Home</a>
@@ -18,11 +21,11 @@
         <a href="#projects">Projects</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-
-        <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-            <span class="theme-icon" aria-hidden="true">&#9790;</span>
-        </button>
     </div>
+
+    <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">&#9790;</span>
+    </button>
     
     <div id="menu-overlay"></div>
 </nav>    
@@ -107,9 +110,9 @@
 <section id="projects">
     <h2>My Projects</h2>
 
-    <div class="projects-container">
+    <div class="projects-showcase">
 
-        <div class="project-card">
+        <article class="project-item">
             <h3>🌐 My First Website</h3>
             <p>
     A responsive website built with HTML, CSS and JavaScript,
@@ -119,8 +122,8 @@
             <a href="project1.html"
             class="project-button">View Project</a>
             
-        </div>
-        <div class="project-card">
+        </article>
+        <article class="project-item">
             <h3>🛍️ Smart Angel Website</h3>
 
     <p>
@@ -132,9 +135,9 @@
    class="project-button">
    View Website
 </a>
-</div>
+</article>
 
-        <div class="project-card">
+    <article class="project-item">
             <h3>🐍 Python Projects</h3>
             <p>
     A collection of Python projects demonstrating programming,
@@ -142,9 +145,9 @@
 </p>
             <a href="python-projects.html"
             class="project-button">View Project</a>
-        </div>
+        </article>
 
-        <div class="project-card">
+        <article class="project-item">
             <h3>📚 School Finder</h3>
             <p>
     A web application designed to help users find senior high
@@ -153,7 +156,7 @@
 </p>
             <a href="school-finder.html"
             class="project-button">View Project</a>
-        </div>
+        </article>
 
     </div>
 </section>
