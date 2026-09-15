@@ -38,35 +38,24 @@ const menuToggle = document.getElementById("menu-toggle");
 const sideMenu = document.getElementById("side-menu");
 
 const menuOverlay = document.getElementById("menu-overlay");
-let menuScrollPosition = 0;
 
 function closeMenu() {
-    const scrollPosition = menuScrollPosition;
-
     sideMenu.classList.remove("open");
     menuOverlay.classList.remove("open");
     document.body.classList.remove("menu-open");
-    document.body.style.top = "";
+    document.documentElement.classList.remove("menu-open");
     menuToggle.textContent = "☰";
     menuToggle.setAttribute("aria-label", "Open navigation menu");
     menuToggle.setAttribute("aria-expanded", "false");
-
-    window.scrollTo(0, scrollPosition);
 }
 
 menuToggle.addEventListener("click", () => {
-    const isOpening = !sideMenu.classList.contains("open");
-
-    if (isOpening) {
-        menuScrollPosition = window.scrollY;
-    }
-
     const isOpen = sideMenu.classList.toggle("open");
     menuOverlay.classList.toggle("open", isOpen);
     document.body.classList.toggle("menu-open", isOpen);
+    document.documentElement.classList.toggle("menu-open", isOpen);
 
     if (isOpen) {
-        document.body.style.top = `-${menuScrollPosition}px`;
         menuToggle.textContent = "✕";
         menuToggle.setAttribute("aria-label", "Close navigation menu");
         menuToggle.setAttribute("aria-expanded", "true");

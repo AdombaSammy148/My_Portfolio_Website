@@ -1633,10 +1633,13 @@ body.dark-mode .project-item h3 {
 }
 
 @media (max-width: 900px) {
+    html.menu-open,
     body.menu-open {
-        position: fixed;
-        width: 100%;
         overflow: hidden;
+    }
+
+    body.menu-open {
+        touch-action: none;
     }
 
     body {
@@ -1693,6 +1696,7 @@ body.dark-mode .project-item h3 {
         pointer-events: none;
         z-index: 1000;
         overflow-y: auto;
+        touch-action: auto;
         transition: left 0.3s ease, visibility 0.3s ease;
     }
 
