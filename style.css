@@ -682,10 +682,10 @@ body.dark-mode .hero {
     width: 42px;
     height: 42px;
     padding: 0;
-    background-color: #eef2ff;
+    background-color: rgb(236, 236, 125);
     border: 1px solid #cfd8ee;
     border-radius: 50%;
-    color: #17233c;
+    color: rgb(8, 1, 1);
     font-size: 22px;
     line-height: 1;
     transition: transform 0.2s, background-color 0.2s;
@@ -697,7 +697,7 @@ body.dark-mode .hero {
 }
 
 body.dark-mode #theme-toggle {
-    background-color: #26375e;
+    background-color: #000;
     border-color: #536486;
     color: #f5f7ff;
 }
@@ -882,8 +882,8 @@ body.dark-mode #theme-toggle:hover {
     #menu-toggle {
     display: block;
     position: static;
-    top: 20px;
-    left: 15px;
+    top: 5px;
+    left: 1px;
     font-size: 15px;
     background: goldenrod;
     border: none;
