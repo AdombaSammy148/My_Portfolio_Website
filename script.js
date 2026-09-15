@@ -1,5 +1,12 @@
 const themeToggle = document.getElementById("theme-toggle");
 
+if (new URLSearchParams(window.location.search).get("from") === "project" && window.location.hash === "#projects") {
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, document.getElementById("projects").offsetTop);
+    window.history.replaceState(null, "", "index.html#projects");
+    document.documentElement.style.scrollBehavior = "smooth";
+}
+
 function updateThemeToggle(isDarkMode) {
     const themeIcon = themeToggle.querySelector(".theme-icon");
 
